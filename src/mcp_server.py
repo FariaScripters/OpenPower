@@ -44,5 +44,9 @@ class Tool:
 # Initialize MCP Server
 server = MCPServer()
 
+# Register tools
+from tools import register_tools
+register_tools(server)
+
 # Create app instance
 app = server.app
