@@ -1,124 +1,77 @@
 # OpenPower
 
-![Python Package using Anaconda](https://github.com/FariaScripters/OpenPower/actions/workflows/python-package-conda.yml/badge.svg)
-![Publish Python Package](https://github.com/FariaScripters/OpenPower/actions/workflows/python-publish.yml/badge.svg)
+<div align="center">
+
+[![Python Package](https://github.com/FariaScripters/OpenPower/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/FariaScripters/OpenPower/actions/workflows/python-package-conda.yml)
+[![PyPI](https://github.com/FariaScripters/OpenPower/actions/workflows/python-publish.yml/badge.svg)](https://pypi.org/project/openpower)
 [![SLSA 3](https://slsa.dev/images/gh-badge-level3.svg)](https://slsa.dev)
 
-A versatile AI agent system providing universal browser automation with a unified REST API.
-
-## Features
-
-- Universal Browser Automation Server with unified REST API (port 8080)
-- Support for multiple browser automation frameworks (e.g. Playwright)
-- Secure sandbox environment for tools and operations
-- User-friendly interface and API access
-
-## Installation
-
-### Using pip
-
-```bash
-pip install openpower
-```
-
-### Using Conda
-
-```bash
-conda env create -f environment.yml
-conda activate openpower
-```
+Universal browser automation with AI capabilities.
+</div>
 
 ## Quick Start
 
-1. Install dependencies:
 ```bash
-pip install -r requirements.txt
-```
+# Install with pip
+pip install openpower
 
-2. Run the server:
-```bash
+# Or with conda
+conda env create -f environment.yml
+conda activate openpower
+
+# Start server
 python src/server.py
 ```
 
-The server will start on `http://localhost:8080`
+Server runs at `http://localhost:8080` 🚀
 
-## Development Setup
+## Development
 
-1. Clone the repository:
 ```bash
+# Clone and setup
 git clone https://github.com/FariaScripters/OpenPower.git
 cd OpenPower
-```
-
-2. Create and activate conda environment:
-```bash
 conda env create -f environment.yml
-conda activate openpower
-```
 
-3. Install development dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-4. Run tests:
-```bash
+# Test
 pytest tests/
-```
 
-## Docker Support
-
-Build and run using Docker:
-
-```bash
+# Docker
 docker compose up
 ```
 
-Or build specific services:
-
-```bash
-docker compose -f docker/docker-compose.ai.yml up
+## Structure
 ```
-
-## Project Structure
-
-```
-OpenPower/
-├── docker/                 # Docker configuration files
-├── src/                    # Source code
-│   ├── mcp_server.py      # MCP server implementation
-│   ├── models.py          # Data models
-│   └── server.py          # Main server application
-├── tests/                 # Test suite
-└── tools/                 # Utility tools and helpers
+src/
+├── mcp_server.py    # MCP implementation
+├── models.py        # Data models
+└── server.py        # Main server
 ```
 
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+```bash
+git checkout -b feature/amazing
+git commit -m 'Add feature'
+git push origin feature/amazing
+```
 
-## License
+<div align="center">
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
 
-## Security
+<div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+  <span style="color: #006747;">■</span>
+  <span style="color: #DA291C;">■</span>
+</div>
 
-For security concerns, please open an issue or contact the maintainers directly.
+[![Founded by Likhon Sheikh](https://img.shields.io/badge/Founder-Likhon%20Sheikh-blue?style=for-the-badge&logo=telegram)](https://t.me/likhonsheikh)
 
-## CI/CD Workflows
+Made with 💚 in Bangladesh 🇧🇩
 
-This project uses several GitHub Actions workflows:
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg" width="25" alt="Bangladesh Flag">
 
-1. **Python Package using Anaconda**: Tests the package on multiple Python versions using Conda
-2. **Publish Python Package**: Automatically publishes to PyPI on new releases
-3. **SLSA Provenance**: Generates SLSA Level 3 provenance for releases
+[Security](https://github.com/FariaScripters/OpenPower/security) · 
+[License](https://github.com/FariaScripters/OpenPower/blob/main/LICENSE)
 
-## Status
-
-- Package Build: ![Python Package using Anaconda](https://github.com/FariaScripters/OpenPower/actions/workflows/python-package-conda.yml/badge.svg)
-- Package Publish: ![Publish Python Package](https://github.com/FariaScripters/OpenPower/actions/workflows/python-publish.yml/badge.svg)
-- SLSA Level: [![SLSA 3](https://slsa.dev/images/gh-badge-level3.svg)](https://slsa.dev)
+</div>
