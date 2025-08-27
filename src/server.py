@@ -1,22 +1,28 @@
 import asyncio
-from fastapi import FastAPI, WebSocket
+from fastapi import FastAPI, WebSocket, HTTPException
 from starlette.middleware.cors import CORSMiddleware
-from typing import Dict, Optional
+from typing import Dict, Optional, List, Any
 from pydantic import BaseModel
 import json
 import uuid
 
 # A2A Protocol types
+class AgentCapabilities(BaseModel):
+    streaming: bool = True
+    pushNotifications: bool = True
+    mcp: bool = True
+
 class AgentCard(BaseModel):
     protocolVersion: str = "0.3.0"
     name: str
     description: str
     url: str
     version: str
-    capabilities: dict
+    capabilities: AgentCapabilities
     defaultInputModes: list[str]
     defaultOutputModes: list[str]
     skills: list[dict]
+    mcpTools: List[str] = []
 
 class BrowserAutomationServer:
     def __init__(self):
