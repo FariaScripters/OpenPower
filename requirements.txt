@@ -14,6 +14,12 @@ json-rpc==1.14.0
 aiohttp==3.8.6
 websockets==12.0
 
+# AI Model Support
+torch==2.2.0
+transformers==4.38.0
+accelerate==0.27.0
+sentencepiece==0.2.0
+
 # Testing
 pytest==7.4.3
 pytest-asyncio==0.21.1

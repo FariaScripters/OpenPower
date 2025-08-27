@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  smollm2:
+    image: ai/smollm2:360M-Q4_K_M
+    container_name: smollm2
+    networks:
+      - ai-models
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  smollm3:
+    image: ai/smollm3
+    container_name: smollm3
+    networks:
+      - ai-models
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+networks:
+  ai-models:
+    external: true
